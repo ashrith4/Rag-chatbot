@@ -1,0 +1,37 @@
+# ── PyTorch CPU-only (install BEFORE sentence-transformers) ───────────────────
+# This forces CPU-only torch (~250 MB) instead of the GPU version (~3+ GB)
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch>=2.0.0
+
+# ── Core RAG stack ────────────────────────────────────────────────────────────
+langchain>=0.3.0
+langchain-community>=0.3.0
+langchain-openai>=0.2.0
+langchain-huggingface>=0.1.0
+
+# ── Vector store ──────────────────────────────────────────────────────────────
+faiss-cpu>=1.12.0
+
+# ── Embeddings ────────────────────────────────────────────────────────────────
+sentence-transformers>=3.0.0
+
+# ── Document loading ──────────────────────────────────────────────────────────
+pypdf>=5.0.0
+
+# ── LLM backends ─────────────────────────────────────────────────────────────
+openai>=1.50.0
+tiktoken>=0.7.0
+
+# ── API layer ─────────────────────────────────────────────────────────────────
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+python-multipart>=0.0.17
+pydantic>=2.9.0
+pydantic-settings>=2.5.0
+
+# ── Frontend ──────────────────────────────────────────────────────────────────
+streamlit>=1.38.0
+
+# ── Utils ─────────────────────────────────────────────────────────────────────
+python-dotenv>=1.0.0
+httpx>=0.27.0
